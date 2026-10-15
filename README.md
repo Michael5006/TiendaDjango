@@ -17,7 +17,7 @@ Proyecto del segundo parcial de Desarrollo de Aplicaciones Web.
 
 ## Descripción
 
-API REST para administrar una tienda mediante tres CRUD:
+Aplicación web para administrar una tienda mediante Django REST Framework y un frontend desarrollado con HTML, CSS y JavaScript.
 
 - Categorías
 - Proveedores
@@ -83,3 +83,63 @@ La API permite realizar:
 - POST: Crear registros.
 - PUT: Actualizar registros.
 - DELETE: Eliminar registros.
+
+
+## Interfaz web
+
+El proyecto incluye una interfaz desarrollada con HTML, CSS y JavaScript puro.
+
+Para acceder a ella, inicia el servidor Django y abre:
+
+http://127.0.0.1:8000/
+
+La interfaz permite:
+
+- Consultar y registrar categorías.
+- Consultar y registrar proveedores.
+- Consultar y registrar productos.
+- Seleccionar la categoría y el proveedor de cada producto.
+- Actualizar las tablas después de registrar datos, sin recargar manualmente la página.
+
+## Organización del proyecto
+
+- `categorias/`: modelo, serializer y ViewSet de categorías.
+- `proveedores/`: modelo, serializer y ViewSet de proveedores.
+- `productos/`: modelo, serializer y ViewSet de productos.
+- `config/`: configuración y rutas de Django.
+- `templates/`: estructura HTML del frontend.
+- `static/css/`: estilos de la aplicación.
+- `static/js/`: funcionalidades JavaScript.
+
+## Trabajo colaborativo
+
+El proyecto fue desarrollado por:
+
+**Michael Hernández**
+- Configuración y estructura del proyecto.
+- Desarrollo del CRUD de Categorías y Productos.
+- Diseño principal del frontend.
+- Implementación de GET y POST de Categorías.
+
+**José Manuel Lasso**
+- Desarrollo del CRUD de Proveedores.
+- Implementación de GET y POST de Proveedores.
+- Implementación de GET y POST de Productos.
+
+Las contribuciones están registradas en el historial de commits de GitHub.
+
+## Uso de inteligencia artificial
+
+Durante el desarrollo se utilizó inteligencia artificial como herramienta de apoyo para comprender conceptos, resolver errores y orientar la implementación.
+
+Se documentaron las consultas, los resultados y las correcciones en una bitácora.
+
+**Bitácora de IA:** PEGAR_AQUI_EL_ENLACE_PUBLICO_DE_GOOGLE_DOCS
+
+## Notas
+
+- El proyecto utiliza SQLite como base de datos local.
+- Después de clonar el repositorio es necesario ejecutar `python manage.py migrate`.
+- Las operaciones GET, POST, PUT y DELETE están disponibles en las API.
+- El frontend implementa GET y POST para las tres entidades.
+
