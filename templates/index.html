@@ -1,0 +1,87 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TiendaDjango</title>
+    <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+</head>
+<body>
+
+    <header class="encabezado">
+        <h1>TiendaDjango</h1>
+        <p>Administración de la tienda</p>
+    </header>
+
+    <main class="contenedor">
+
+        <!-- Tarjetas de navegación -->
+        <nav class="navegacion">
+            <a href="#categorias" class="tarjeta acceso">
+                Categorías
+            </a>
+
+            <a href="#proveedores" class="tarjeta acceso">
+                Proveedores
+            </a>
+
+            <a href="#productos" class="tarjeta acceso">
+                Productos
+            </a>
+        </nav>
+
+        <!-- Categorías -->
+        <section id="categorias" class="tarjeta seccion">
+            <h2>Categorías</h2>
+            <p>Registra y consulta las categorías de la tienda.</p>
+
+            <h3>Agregar categoría</h3>
+
+            <form id="form-categorias" class="formulario">
+                {% csrf_token %}
+                <label for="nombre-categoria">Nombre</label>
+                <input type="text" id="nombre-categoria"
+                       maxlength="100" required>
+
+                <label for="descripcion-categoria">Descripción</label>
+                <textarea id="descripcion-categoria" rows="3"></textarea>
+
+                <button type="submit">Guardar categoría</button>
+            </form>
+
+            <p id="mensaje-categorias" role="status"></p>
+
+            <h3>Lista de categorías</h3>
+
+            <div class="tabla-contenedor">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre</th>
+                            <th>Descripción</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabla-categorias"></tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Sección de Manuel -->
+        <section id="proveedores" class="tarjeta seccion">
+            <h2>Proveedores</h2>
+            <p>Esta sección se completará con Manuel.</p>
+        </section>
+
+        <!-- Sección de Manuel -->
+        <section id="productos" class="tarjeta seccion">
+            <h2>Productos</h2>
+            <p>Esta sección se completará con Manuel.</p>
+        </section>
+
+    </main>
+    <script src="{% static 'js/categorias.js' %}"></script>
+</body>
+</html>

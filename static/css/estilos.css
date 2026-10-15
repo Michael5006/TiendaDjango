@@ -1,0 +1,169 @@
+
+/* Estilos generales */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #202124;
+    font-size: 16px;
+}
+
+/* Encabezado */
+.encabezado {
+    background-color: white;
+    border-bottom: 1px solid #dadce0;
+    padding: 24px;
+    text-align: center;
+}
+
+.encabezado h1 {
+    margin: 0;
+    font-size: 26px;
+}
+
+.encabezado p {
+    color: #5f6368;
+    margin-bottom: 0;
+}
+
+/* Contenido principal */
+.contenedor {
+    max-width: 1050px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+/* Tarjetas */
+.tarjeta {
+    background-color: white;
+    border: 1px solid #dadce0;
+    border-radius: 12px;
+    padding: 24px;
+}
+
+/* Navegación */
+.navegacion {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-bottom: 25px;
+}
+
+.acceso {
+    text-align: center;
+    text-decoration: none;
+    color: #202124;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+/* Secciones */
+.seccion {
+    margin-bottom: 24px;
+}
+
+.seccion h2 {
+    font-size: 22px;
+    margin-top: 0;
+}
+
+.seccion h3 {
+    font-size: 18px;
+    margin-top: 30px;
+}
+
+.seccion p {
+    color: #5f6368;
+}
+
+/* Formularios */
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 550px;
+}
+
+.formulario label {
+    font-size: 15px;
+}
+
+.formulario input,
+.formulario textarea,
+.formulario select {
+    font-family: inherit;
+    font-size: 15px;
+    padding: 12px;
+    border: 1px solid #dadce0;
+    border-radius: 6px;
+    background-color: white;
+    color: #202124;
+    width: 100%;
+}
+
+.formulario input:focus,
+.formulario textarea:focus,
+.formulario select:focus {
+    outline: 2px solid #80868b;
+    outline-offset: 1px;
+}
+
+/* Botones */
+button {
+    background-color: #3c4043;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 12px 20px;
+    font-size: 15px;
+    cursor: pointer;
+    align-self: flex-start;
+}
+
+/* Tablas */
+.tabla-contenedor {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th, td {
+    text-align: left;
+    padding: 14px;
+    border-bottom: 1px solid #e8eaed;
+}
+
+th {
+    color: #5f6368;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+td {
+    font-size: 15px;
+}
+
+/* Adaptación a pantallas pequeñas */
+@media (max-width: 650px) {
+    .navegacion {
+        grid-template-columns: 1fr;
+    }
+
+    .contenedor {
+        margin: 20px auto;
+        padding: 0 12px;
+    }
+
+    .tarjeta {
+        padding: 18px;
+    }
+}
