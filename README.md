@@ -134,7 +134,7 @@ Durante el desarrollo se utilizó inteligencia artificial como herramienta de ap
 
 Se documentaron las consultas, los resultados y las correcciones en una bitácora.
 
-**Bitácora de IA:** PEGAR_AQUI_EL_ENLACE_PUBLICO_DE_GOOGLE_DOCS
+**Bitácora de IA:** https://docs.google.com/document/d/13DPxWaCfFgDye-3NS5-AHkO-Bhy2y6Nt/edit?usp=sharing&ouid=100224062037372335605&rtpof=true&sd=true
 
 ## Notas
 

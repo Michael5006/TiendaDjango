@@ -79,3 +79,11 @@ formularioProveedores.addEventListener('submit', async function(evento) {
     }
 });
 
+
+const campoTelefono = document.getElementById('telefono-proveedor');
+
+campoTelefono.addEventListener('input', function() {
+    this.value = this.value.replace(/\D/g, '');
+});
+
+

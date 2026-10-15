@@ -1,4 +1,13 @@
 
+
+const formatoCOP = new Intl.NumberFormat('es-CO', {
+    style: 'currency',
+    currency: 'COP',
+    minimumFractionDigits: 0,
+    maximumFractionDigits: 2
+});
+
+
 async function cargarProductos() {
     const tabla = document.getElementById('tabla-productos');
     const mensaje = document.getElementById('mensaje-productos');
@@ -28,7 +37,7 @@ async function cargarProductos() {
 
             fila.insertCell().textContent = producto.id;
             fila.insertCell().textContent = producto.nombre;
-            fila.insertCell().textContent = producto.precio;
+            fila.insertCell().textContent = formatoCOP.format(Number(producto.precio));
             fila.insertCell().textContent = producto.cantidad;
             fila.insertCell().textContent = producto.categoria;
             fila.insertCell().textContent = producto.proveedor;
@@ -94,11 +103,30 @@ cargarOpcionesProducto();
 
 const formularioProductos = document.getElementById('form-productos');
 
+
+const campoPrecio = document.getElementById('precio-producto');
+const campoCantidad = document.getElementById('cantidad-producto');
+
+// Solo permitir números enteros en la cantidad
+campoCantidad.addEventListener('input', function() {
+    this.value = this.value.replace(/\D/g, '');
+});
+
+// Mostrar el precio en formato colombiano
+campoPrecio.addEventListener('input', function() {
+    const digitos = this.value.replace(/\D/g, '').slice(0, 8);
+
+    this.value = digitos
+        ? formatoCOP.format(Number(digitos))
+        : '';
+});
+
+
 formularioProductos.addEventListener('submit', async function(evento) {
     evento.preventDefault();
 
     const nombre = document.getElementById('nombre-producto').value;
-    const precio = document.getElementById('precio-producto').value;
+    const precio = campoPrecio.value.replace(/\D/g, '');
     const cantidad = document.getElementById('cantidad-producto').value;
     const categoria = document.getElementById('categoria-producto').value;
     const proveedor = document.getElementById('proveedor-producto').value;
